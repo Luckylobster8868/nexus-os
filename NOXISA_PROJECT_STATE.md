@@ -1,0 +1,1 @@
+docs/NOXISA_PROJECT_STATE.md

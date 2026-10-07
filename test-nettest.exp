@@ -1,0 +1,18 @@
+#!/usr/bin/expect -f
+set timeout 30
+
+spawn bash run-qemu.sh
+
+expect "Nexus>"
+send "spawn nettest\r"
+
+expect "nettest: PASS"
+send "\r"
+expect "Nexus>"
+
+# Wait a little bit just to catch any late output
+sleep 1
+
+# Quit QEMU (monitor or kill)
+# Because we are using -no-shutdown, we can just kill it
+exec kill [exp_pid]

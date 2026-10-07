@@ -1,0 +1,3 @@
+managed::slice::ManagedSlice<'_, PacketMetadata<IpAddress>>
+managed::slice::ManagedSlice<'_, PacketMetadata<IpAddress>>: From<Vec<{integer}>>
+Into<managed::slice::ManagedSlice<'_, PacketMetadata<IpAddress>>>
